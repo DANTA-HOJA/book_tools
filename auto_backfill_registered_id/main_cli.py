@@ -8,9 +8,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import rich
-import tomlkit
-from modules.check import check_xlsx, check_dir
+from modules.check import check_dir, check_xlsx
 from modules.utils import (add_total_sum, col_strip, copy_as_index,
                            load_config, read_ws, sync_catalog_value)
 from openpyxl import load_workbook
