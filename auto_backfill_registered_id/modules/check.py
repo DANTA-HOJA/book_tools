@@ -16,9 +16,6 @@ def check_xlsx(file: Path, _class_name: str):
 def check_dir(dir: Path):
     """
     """
-    if not dir.exists():
-        raise ValueError(f"指定的存放路徑不存在, Current path: '{dir}'")
-    
     if not dir.is_dir():
-        raise ValueError(f"指定的存放路徑必須是資料夾, Current path: '{dir}'")
+        raise ValueError(f"指定的存放路徑 不存在 或 不是資料夾, Current path: '{dir}'")
     # -------------------------------------------------------------------------/
