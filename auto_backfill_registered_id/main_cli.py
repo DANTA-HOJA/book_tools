@@ -58,7 +58,7 @@ config = load_config(config_path, console)
 # %%
 # 交貨清單
 purchasing_wb: Path = Path(config["purchasing"]) # attr: wb_path
-check_xlsx(purchasing_wb, "交貨清單")
+check_xlsx(purchasing_wb.resolve(), "交貨清單")
 
 purchasing_st_rowidx: int = 2
 purchasing_colnames: set = set([
@@ -93,7 +93,7 @@ purchasing_df: pd.DataFrame
 
 # 編目箱單
 catalog_wb: Path = Path(config["catalog"]) # attr: wb_path
-check_xlsx(catalog_wb, "編目箱單")
+check_xlsx(catalog_wb.resolve(), "編目箱單")
 
 catalog_st_rowidx: int = 1
 catalog_colnames: set = set([
