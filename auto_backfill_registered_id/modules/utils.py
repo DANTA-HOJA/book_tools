@@ -23,7 +23,7 @@ def load_config(path: Path,
                                 encoding="utf-8") as f_reader:
         config = tomlkit.load(f_reader)
     
-    console.print(f"Config: '{path}'")
+    console.print(f"Config: '{path.resolve()}'")
     
     return config
     # -------------------------------------------------------------------------/
