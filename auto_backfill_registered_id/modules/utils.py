@@ -6,8 +6,27 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import rich.progress
+import tomlkit
 from rich.console import Console
 # -----------------------------------------------------------------------------/
+
+
+def load_config(path: Path,
+                console: Console):
+    """
+    """
+    if not isinstance(path, Path):
+        raise TypeError("Config should be a `Path` object, "
+                            "using 'from pathlib import Path'")
+    
+    with rich.progress.open(path, mode="r",
+                                encoding="utf-8") as f_reader:
+        config = tomlkit.load(f_reader)
+    
+    console.print(f"Config: '{path}'")
+    
+    return config
+    # -------------------------------------------------------------------------/
 
 
 def read_ws(wb_path: Path,
