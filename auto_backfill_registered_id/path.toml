@@ -1,0 +1,8 @@
+# 交貨清單 (xlsx)
+purchasing = ""
+
+# 編目箱單 (xlsx)
+catalog = ""
+
+# 回填OK (folder)
+new_wb_dir = ""
