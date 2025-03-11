@@ -3,5 +3,5 @@
 ## installation
 
 ```
-pip install rich numpy pandas openpyxl
+pip install rich numpy pandas openpyxl tomlkit
 ```
